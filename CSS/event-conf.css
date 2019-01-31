@@ -1,0 +1,443 @@
+/* Css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,img,
+ins,kbd,q,s,samp,small,strike,strong,sub,
+sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,
+section,summary,time,mark,audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+/* Font */
+@font-face {
+    font-family: Qanelas;
+    src: url(../font/light/Qanelas-Light.woff);
+}
+
+@font-face {
+    font-family: Qanelas-bold;
+    src: url(../font/bold/Qanelas-Bold.woff);
+}
+
+body {
+    margin: 0px;
+    font-family: Qanelas-bold;
+}
+/* Navbar */
+.topNav {
+    width: 100%;
+    height: 10rem;
+    background-color: #0a1737;
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 3px solid #16f4f7;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.logo>img {
+    max-width: 12%;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    cursor: pointer;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline-block;
+    position: absolute;
+    top: 0rem;
+    right: 10rem;
+    font-size: 18px;
+}
+/* Event */
+.titleEvents{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  height: 2rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  font-family: Qanelas-Bold;
+  margin-bottom: 4rem;
+  
+}
+
+.lineUp{
+  width: 6rem;
+  height: .2rem;
+  background-color: #16f4f7;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin: 0 auto;
+
+}
+.lineDown{
+  width: 20rem;
+  height: .2rem;
+  background-color: #16f4f7;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin: 0 auto;
+}
+.nav>.nav-links>a {
+    display: inline-block;
+    font-weight: 600;
+    padding: 27px 10px;
+    text-decoration: none;
+    color: #0a1737;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+/* Media Queries */
+@media (max-width:780px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 3rem;
+        top: 0.5rem;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        color: #0a1737;
+    }
+    .nav>.nav-btn>label:hover {
+        background-color: rgba(10, 23, 55, 0.70);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #0a1737;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #0a1737;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 80px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        color: white;
+        text-align: center;
+    }
+    .nav>#nav-check:not(:checked)+.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked+.nav-links {
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 1;
+    }
+    .logo>img {
+        max-width: 32%;
+        position: absolute;
+        top: 30%;
+        left: 22%;
+    }
+}
+/* Navbar */
+.topnav {
+    width: 100%;
+    height: 10%;
+    background-color: #0a1737;
+    position: relative;
+    padding: 1rem;
+    color: #fff;
+    font-family: Qanelas;
+}
+
+.left>ul {
+    list-style: none;
+    position: absolute;
+    top: 2%;
+    left: 12%;
+}
+
+.right>ul {
+    list-style: none;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+}
+
+.left>ul>li {
+    padding: .2rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.right>ul>li {
+    display: inline-block;
+    padding: .2rem;
+}
+/* Footer */
+footer {
+    background-color: #091736;
+    color: #dfe6e9;
+}
+
+.top {
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    text-align: center;
+}
+footer p {
+    font-family: Qanelas;
+    font-size: .85rem;
+}
+
+.bottom {
+    background-color: #08122a;
+    height: 3rem;
+}
+
+.logos>img {
+    max-width: 12%;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+    padding-top: .3rem;
+}
+.bottom>p {
+    position: absolute;
+    left: 25%;
+    padding-top: .7rem;
+    font-family: Qanelas;
+}
+
+.bottom>p {
+    position: absolute;
+    left: 25%;
+    padding-top: .7rem;
+}
+/* Header */
+.hero {
+    width:100%;
+    height: 32rem;
+    position: relative;
+    background-image: linear-gradient(rgba(10, 23, 55, 0.30), rgba(10, 23, 55, 0.90)),
+    url(../images/herooffice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero>h1:nth-child(1) {
+    color: #fff;
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 8rem;
+    margin: 0 auto;
+}
+.hero>h1:nth-child(2) {
+    color: #fff;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 6rem;
+}
+/* Main Section */
+.mainSection {
+    background-color: #08122a;
+    text-align: center;
+}
+/* main Content */
+.content {
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+}
+.content > h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 1.5rem;
+}
+.content > img {
+    max-width: 12rem;
+    margin-bottom: 1rem;
+}
+.content> p {
+    margin-bottom: 1.7rem;
+}
+.images {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 2rem;
+}
+.mainSection >button {
+    background-color: #16f4f7;
+    border: none;
+    border-radius: 7px;
+    font-family: Qanelas-Bold;
+    color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.mainSection >button:hover {
+    background-color: #099090;
+}
+
+.secondSection >button {
+    background-color: #16f4f7;
+    border: none;
+    border-radius: 7px;
+    font-family: Qanelas-Bold;
+    color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.secondSection >button:hover {
+    background-color: #099090;
+}
+.secondSection {
+    background-color: #08122a;
+    text-align: center;
+    
+}
+.container {
+      text-align: center;
+      max-width: 70%;
+      margin: 0 auto;
+      color: #fff;
+      overflow: hidden;
+      padding-top: 2rem;
+      margin-bottom: 1.5rem;
+}
+.container >img {
+    max-width: 12rem;
+    margin-bottom: 1.5rem;
+}
+.image {
+    padding-bottom: 1.5rem;
+
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+    .topnav {
+        height: 25%;
+        padding: 4rem;
+    }
+    .left>ul>li {
+        font-size: 80%;
+        padding-bottom: .9rem;
+        display: block;
+    }
+    .right>ul {
+        left: 35%;
+        top: 64%;
+    }
+    .left>ul {
+        left: 35%;
+        top: 10%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .top {
+        display: none;
+    }
+    .date {
+        height: 30rem;
+    }
+    .main-content {
+        font-size: 80%;
+    }
+    .hero>h1:nth-child(1) {
+        font-size: 4rem;
+    }
+    .hero>h1:nth-child(2) {
+        font-size: 4rem;
+    }
+}

@@ -1,0 +1,352 @@
+/* Css reset */
+*{
+    padding: 0px;
+    margin:0px;
+}
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,img,
+ins,kbd,q,s,samp,small,strike,strong,sub,
+sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,
+section,summary,time,mark,audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+    font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Font */
+@font-face {
+  font-family: Qanelas-bold;
+  src: url(../font/bold/Qanelas-Bold.woff);
+}
+body {
+  font-family: Qanelas;
+  color: #0a1737;
+  overflow: hidden;
+ 
+}
+body{
+    background-image: url(../images/erreur404.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+body img{
+    margin: 0 auto;
+    text-align: center; 
+}
+.container > img {
+    padding-top: 7rem;
+}
+/* Main */
+.container{
+    
+    height: 15rem;
+    width: 25rem;
+    margin: 0 auto;
+}
+
+.container button{
+    text-align: center;
+    height: 2rem;
+    width: 8rem;
+    background-color: #ec3642;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: Qanelas-bold;
+    margin-top: 3rem;
+    text-align: center;
+    margin-left: 8rem;
+}
+.container button a{
+    text-decoration: none;
+    color: white;
+}
+/* Navbar */
+.topNav {
+    width: 100%;
+    height: 10rem;
+    background-color: #0a1737;
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 3px solid #16f4f7;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.logo>img {
+    max-width: 12%;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    cursor: pointer;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline-block;
+    position: absolute;
+    top: 0rem;
+    right: 10rem;
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    font-weight: 600;
+    padding: 27px 10px;
+    text-decoration: none;
+    color: #0a1737;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+/* About us */
+.aboutUs p{
+    font-size: .8rem;
+    font-family: Qanelas-Light;
+}
+.address p{
+    font-size: .8rem;
+    font-family: Qanelas-Light;
+}
+.post p{
+    font-size: .8rem;
+    font-family: Qanelas-Light;
+}
+/* Media Queries */
+@media (max-width:780px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 3rem;
+        top: 0.5rem;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        color: #0a1737;
+    }
+    .nav>.nav-btn>label:hover {
+        background-color: rgba(10, 23, 55, 0.70);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #0a1737;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #0a1737;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 80px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        color: white;
+        text-align: center;
+    }
+    .nav>#nav-check:not(:checked)+.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked+.nav-links {
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 1;
+    }
+    .logo>img {
+        max-width: 32%;
+        position: absolute;
+        top: 12%;
+        left: 22%;
+    }
+        .logos>img {
+        width: 5rem;
+        margin-top: .5rem;
+    }
+}
+/* Main Nav */
+.topnav {
+    height: 10%;
+    background-color: #0a1737;
+    position: relative;
+    padding: 1rem;
+    color: #fff;
+}
+
+.left>ul {
+    list-style: none;
+    position: absolute;
+    top: 2%;
+    left: 12%;
+}
+
+.right>ul {
+    list-style: none;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+}
+
+.left>ul>li {
+    padding: .2rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.right>ul>li {
+    display: inline-block;
+    padding: .2rem;
+}
+/* Footer */
+footer {
+    background-color: #091736;
+    color: #dfe6e9;
+}
+
+.top {
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    text-align: center;
+}
+
+.bottom {
+    background-color: #08122a;
+    height: 3rem;
+}
+
+.logos>img {
+    max-width: 12%;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+    padding-top: .3rem;
+}
+
+.bottom>p {
+    position: absolute;
+    left: 25%;
+    padding-top: .7rem;
+}
+/* Media Queries */
+@media screen and (max-width: 500px) {
+    .topnav {
+        height: 25%;
+        padding: 4rem;
+    }
+    .left>ul>li {
+        font-size: 80%;
+        padding-bottom: .9rem;
+        display: block;
+    }
+    .right>ul {
+        left: 35%;
+        top: 64%;
+    }
+    .left>ul {
+        left: 35%;
+        top: 10%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .top {
+        display: none;
+    }
+    .date {
+        height: 30rem;
+    }
+    .main-content {
+        font-size: 80%;
+    }
+    .logos>img {
+        width: 5rem;
+        margin-top: .5rem;
+    }
+}
+/* Media Queries */
+@media screen and (max-width: 480px){
+    .container img{
+        width: 20rem;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+    }
+    .container button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+    body{
+        background-size: 100%;
+
+    }
+}
